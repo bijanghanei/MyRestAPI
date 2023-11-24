@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("/api")
 public class EmployeeRestController {
     private EmployeeService employeeService;
 
@@ -21,6 +21,6 @@ public class EmployeeRestController {
 
     @GetMapping("/employees")
     public List<Employee> findAll(){
-        return employeeService.findAll();
+        return employeeService.getAllEmployees();
     }
 }

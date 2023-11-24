@@ -1,21 +1,23 @@
 package com.bijanghanei.MyRestAPI.service;
 
-import com.bijanghanei.MyRestAPI.dao.EmployeeDAO;
+
+import com.bijanghanei.MyRestAPI.dao.EmployeeRepository;
 import com.bijanghanei.MyRestAPI.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class EmployeeServiceImpl implements EmployeeService{
-    private EmployeeDAO employeeDAO;
+    private EmployeeRepository employeeRepository;
 
     @Autowired
-    public EmployeeServiceImpl(EmployeeDAO employeeDAO) {
-        this.employeeDAO = employeeDAO;
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
     }
 
     @Override
-    public List<Employee> findAll() {
-        return null;
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
     }
 }

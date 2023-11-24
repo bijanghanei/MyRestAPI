@@ -19,7 +19,7 @@ public class Employee {
     public Employee() {
     }
 
-//    id willbe auto  incremented
+//    id will be auto  incremented
     public Employee(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;

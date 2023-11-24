@@ -5,5 +5,5 @@ import com.bijanghanei.MyRestAPI.entity.Employee;
 import java.util.List;
 
 public interface EmployeeService {
-    List<Employee> findAll();
+    List<Employee> getAllEmployees();
 }
